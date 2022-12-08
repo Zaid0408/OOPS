@@ -41,7 +41,7 @@ class STUDENT
             }
             
         }
-        void av(int k)
+        void av(int k) //to calc average marks in cie
         {
             float min=marks[k][0],sum=0;
             for(int j=0;j<3;j++)
@@ -60,7 +60,7 @@ int main()
     int b;
     cout<<"Enter number of students";
     cin>>b;
-    STUDENT e1[b];
+    STUDENT e1[b]; //array of objects to store data of n students
     for(int i=0;i<b;i++)
     {
         e1[i].read();
