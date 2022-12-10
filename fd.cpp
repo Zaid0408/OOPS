@@ -20,7 +20,7 @@ class fd
         f1.ma=f1.p*(pow((1+(0.01*f1.r/f1.n)),f1.n*f1.t));
         cout<< "Maturity amount is: "<<f1.ma<<endl;
     }
-    fd(double a,double b,double c,double d)
+    fd(double a,double b,double c,double d) // overloading constructors
     {
         cout<<"Interest earned is: "<<(a-b)<<"\nRate of interest per period is: "<<(c/d)<<endl;
     }
