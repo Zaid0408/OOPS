@@ -1,5 +1,8 @@
 #include <iostream>
 #include <math.h>
+#include <fstream>
+#include<string>
+
 using namespace std;
 
 class fd
@@ -33,5 +36,14 @@ int main()
     fd f1;
     fd f2(f1);
     fd f3(f1.ma,f1.p,f1.r,f1.n);
+    fstream cs;
+    cs.open("FixedDeposit.csv", ios::out | ios::app);
+    cs<<"Principal Amount"<<","<<f1.p<<endl;
+    cs<<"Rate of Interest"<<","<<f1.r<<endl;
+    cs<<"Time in years"<<","<<f1.t<<endl;
+    cs<<"Compound frequency per year"<<","<<f1.n<<endl;
+    cs<<"Rate of Interest per period "<<","<<(f1.r/f1.n)<<endl;
+    cs<<"Maturity Amount"<<","<<f1.ma<<endl;
+    cs<<"Compound Interest"<<","<<(f1.ma-f1.p)<<endl;
     return 1;
 }
