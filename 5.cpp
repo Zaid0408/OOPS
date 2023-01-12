@@ -195,5 +195,5 @@ int main()
     M3=M2+M1;
     M4=M2-M1;
     return 1;
->>>>>>> 82127fe (done da)
 }
+>>>>>>> 82127fe (done da)
