@@ -50,14 +50,12 @@ class Teacher:  virtual public Person
 class TA:  virtual public Student, virtual public Teacher
 {
     public:
-    Student s;
-    Teacher t;
     TA()
     {
-        s.get();
-        t.get();
-        s.display();
-        t.display();
+        Student::get();
+        Teacher::get();
+        Student::display();
+        Teacher::display();
     }
 };
 int main()
